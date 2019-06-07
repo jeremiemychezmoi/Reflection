@@ -15,7 +15,7 @@ namespace phpDocumentor\Reflection;
 use phpDocumentor\Event\Dispatcher;
 use phpDocumentor\Parser\Event\LogEvent;
 use phpDocumentor\Reflection\DocBlock;
-use phpDocumentor\Reflection\DocBlock\Context;
+use phpDocumentor\Reflection\Types\Context;
 use phpDocumentor\Reflection\DocBlock\Location;
 use phpDocumentor\Reflection\Event\PostDocBlockExtractionEvent;
 use phpDocumentor\Reflection\Exception;
@@ -136,7 +136,7 @@ class FileReflector extends ReflectionAbstract implements NodeVisitor
 
         $this->filename = $file;
         $this->contents = file_get_contents($file);
-        $this->context = new Context();
+        $this->context = new Context('');
 
         if (strtolower($encoding) !== 'utf-8' && extension_loaded('iconv')) {
             $this->contents = iconv(
@@ -561,3 +561,4 @@ class FileReflector extends ReflectionAbstract implements NodeVisitor
     {
     }
 }
+

@@ -11,7 +11,7 @@
  */
 namespace phpDocumentor\Reflection;
 
-use phpDocumentor\Reflection\DocBlock\Context;
+use phpDocumentor\Reflection\Types\Context;
 use PhpParser\Node\Stmt\Class_;
 use PhpParser\Node\Stmt\ClassMethod;
 use PHPUnit_Framework_TestCase;

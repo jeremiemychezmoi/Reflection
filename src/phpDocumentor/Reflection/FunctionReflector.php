@@ -13,7 +13,7 @@
 namespace phpDocumentor\Reflection;
 
 use phpDocumentor\Reflection\BaseReflector;
-use phpDocumentor\Reflection\DocBlock\Context;
+use phpDocumentor\Reflection\Types\Context;
 use PhpParser\Node\Param;
 use PhpParser\Node\Stmt;
 use PhpParser\Node\Stmt\Function_;

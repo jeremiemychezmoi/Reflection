@@ -14,7 +14,7 @@ namespace phpDocumentor\Reflection\ClassReflector;
 
 use phpDocumentor\Reflection\BaseReflector;
 use phpDocumentor\Reflection\ConstantReflector as BaseConstantReflector;
-use phpDocumentor\Reflection\DocBlock\Context;
+use phpDocumentor\Reflection\Types\Context;
 use PhpParser\Node\Stmt\ClassConst;
 use PhpParser\Node\Const_;
 

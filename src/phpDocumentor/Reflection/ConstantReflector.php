@@ -13,7 +13,7 @@
 namespace phpDocumentor\Reflection;
 
 use phpDocumentor\Reflection\DocBlock;
-use phpDocumentor\Reflection\DocBlock\Context;
+use phpDocumentor\Reflection\Types\Context;
 use PhpParser\Node\Const_;
 use PhpParser\Node\Stmt\Const_ as ConstStmt;
 
@@ -36,6 +36,7 @@ class ConstantReflector extends BaseReflector
      * Registers the Constant Statement and Node with this reflector.
      *
      * @param ConstStmt $stmt
+     * @param Context $context
      * @param Const_ $node
      */
     public function __construct(

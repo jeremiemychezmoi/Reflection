@@ -14,7 +14,7 @@ namespace phpDocumentor\Reflection\ClassReflector;
 
 use phpDocumentor\Reflection\BaseReflector;
 use phpDocumentor\Reflection\DocBlock;
-use phpDocumentor\Reflection\DocBlock\Context;
+use phpDocumentor\Reflection\Types\Context;
 use PhpParser\Node\Stmt\Class_;
 use PhpParser\Node\Stmt\Property;
 use PhpParser\Node\Stmt\PropertyProperty;

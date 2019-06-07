@@ -16,7 +16,7 @@ use phpDocumentor\Event\Dispatcher;
 use phpDocumentor\Parser\Event\LogEvent;
 use phpDocumentor\Reflection\DocBlock;
 use phpDocumentor\Reflection\Types\Context;
-use phpDocumentor\Reflection\DocBlock\Location;
+use phpDocumentor\Reflection\Types\Location;
 use phpDocumentor\Reflection\Event\PostDocBlockExtractionEvent;
 use phpDocumentor\Reflection\Exception;
 use PhpParser\Node\Stmt\ClassMethod;

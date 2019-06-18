@@ -18,7 +18,6 @@ use phpDocumentor\Event\Dispatcher;
 use phpDocumentor\Reflection\DocBlock;
 use phpDocumentor\Reflection\Event\PostDocBlockExtractionEvent;
 use phpDocumentor\Reflection\Types\Context;
-use phpDocumentor\Reflection\Types\Location;
 use PhpParser\NodeAbstract;
 use Psr\Log\LogLevel;
 use PhpParser\Node\Expr;
@@ -127,6 +126,8 @@ abstract class BaseReflector extends ReflectionAbstract
             try {
                 $doc_block = new DocBlock(
                     (string) $comment,
+                    null,
+                    [],
                     $this->context,
                     new Location($comment->getLine())
                 );
@@ -139,7 +140,7 @@ abstract class BaseReflector extends ReflectionAbstract
             Dispatcher::getInstance()->dispatch(
                 'reflection.docblock-extraction.post',
                 PostDocBlockExtractionEvent
-                ::createInstance($this)->setDocblock($doc_block)
+                    ::createInstance($this)->setDocblock($doc_block)
             );
         }
 
